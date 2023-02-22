@@ -1,0 +1,90 @@
+#!bin/bash
+C=1
+Str="Durre"
+Filename="${Str}${C}"
+while [ -f $Filename ]
+do
+        if [ $C -eq 1 ]
+        then
+        echo "Existing files"
+        fi
+        echo $Filename
+        ((C=C+1))
+        Filename="${Str}${C}"
+done
+if [ $C -eq 1 ]
+then
+        echo "Existing Files = 0"
+        echo "                   "
+fi
+((I=C+25))
+echo "New Files"
+while [ $C -lt $I ]
+do
+        Filename="${Str}${C}"
+        echo $Filename
+        touch $Filename
+        ((C=C+1))
+
+fi 
+done
+
+
+
+
+Explanation
+
+#!bin/bash
+cd /e/Perscholas/Bashscript
+
+#Initializing variables
+c=1
+str="Durre"
+outcome="${str}${c}"
+
+
+#While loop to check for existing files and to find the starting number for files which needs to be created
+while [ -f $outcome ]
+do
+        #this if condition will print only first time
+        if [ $c -eq 1 ]
+        then
+                echo "Existing Files"
+        fi
+
+        #Printing the existing files
+        echo $outcome
+
+        #incrementing the c variable value to check for next file
+        ((c=c+1))
+
+        #Updating outcome variable
+        outcome="${str}${c}"
+done
+
+
+#this if condition will run one time when there are no existing files
+if [ $c -eq 1 ]
+then
+        echo "Existing Files-0"
+        echo "               "
+fi
+
+#Initializing new variable value to create a new batch of 25 files
+((i=c+25))
+
+echo "New Files Created"
+
+#while loop for new files
+while [ $c -lt $i ]
+do
+outcome="${str}${c}"
+
+then
+        echo $outcome
+
+        touch $outcome
+
+#incrementing the c variable
+((c=c+1))
+done
