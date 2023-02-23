@@ -1,0 +1,10 @@
+#!/bin/bash
+
+counter=5#!/bin/bash
+
+counter=5
+while [ $counter -lt 25 ]; do
+    let counter+=1
+    echo $counter
+done
+
