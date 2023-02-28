@@ -1,0 +1,24 @@
+                                                           Command line interface- CLI
+
+cat/proc/mounts: command for displaying a list of mounted drives.
+
+rm <filename>: removing the specific file from the current director.
+
+sudo reboot: rebooting the remove AWS system for viewing results of changes.
+
+sudochmod<options>: changing the access mode for current directory.
+
+sudormdir<directory name>: removing the specific directory.
+
+sudo yum -y install <service or feature>: installing a required support service or feature in the AWS system.
+
+sudomkdir<directory name>: creating a new directory for holding files.
+
+rpm -ql’<package name>: obtaining a list of utilities in a package.
+
+sudo yum update: installing all required AWS updates.
+
+sudo yum search ‘<package name>’: searching for a package.
+
+sudo yum groupinstall “<group package name>”: installing a specific group of packages.
+
